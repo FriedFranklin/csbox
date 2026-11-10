@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+var europrice = 0;
+
 fs.readFile('daten/obscuredstring.json', 'utf-8', (err, data) => {
     if (err) throw err;
     //console.log(typeof(data) + typeof(JSON.parse(data)));
@@ -13,4 +15,6 @@ fs.readFile('daten/obscuredstring.json', 'utf-8', (err, data) => {
     //divide by 100 to get the price in euros
     uncompellingprice = uncompellingprice / 100;
     console.log("Uncompelling Price: " + uncompellingprice);
+    europrice = uncompellingprice;
+     
 });
