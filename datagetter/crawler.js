@@ -11,7 +11,7 @@ async function fetchWebContent() {
             console.log("Content fetched successfully!");
             console.log(response.data.substring(0, 500));  // Display the first 500 characters of the webpage content
             // Save the content to a file
-            fs.writeFileSync('\daten\webpage_content.html', response.data);
+            fs.writeFileSync('daten/webpage_content.html', response.data);
             console.log("Content saved to '/daten/webpage_content.html'");
         } else {
             console.log("Failed to fetch content.");
