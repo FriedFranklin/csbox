@@ -18,5 +18,5 @@ jobs:
       - name: Install dependencies
         run: npm install
       - run: node datagetter/crawler.js
-      - run: node datagetter/extract.js
+      - run: node datagetter/extrakter.js
       - run: node datagetter/pricegetter.js
