@@ -21,8 +21,8 @@ jobs:
       - run: node datagetter/extrakter.js
       - run: node datagetter/pricegetter.js
 
-      - name: Checkout repository
-        uses: actions/checkout@v6
+      #- name: Checkout repository
+      #  uses: actions/checkout@v6
       #- name: Change something
         #run: |
         #  find . -type f -name "*.md" -print0 | xargs -0 sed -i "s/foo/bar/g"
