@@ -20,3 +20,15 @@ jobs:
       - run: node datagetter/crawler.js
       - run: node datagetter/extrakter.js
       - run: node datagetter/pricegetter.js
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Change something
+        #run: |
+        #  find . -type f -name "*.md" -print0 | xargs -0 sed -i "s/foo/bar/g"
+
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@v1.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "DataUpdated"
